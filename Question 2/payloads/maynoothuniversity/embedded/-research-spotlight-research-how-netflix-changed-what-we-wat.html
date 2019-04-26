@@ -1,0 +1,557 @@
+<body>
+ <div class="ep_tm_header ep_noprint">
+  <!--RU  replace the following div to point to University rather than eprints home page  
+         <div class="ep_tm_site_logo">
+           <a href="{$config{frontpage}}" title="{phrase('archive_name')}">
+            <img alt="{phrase('archive_name')}" src="{$config{rel_path}}{$config{site_logo}}"/>
+          </a>
+        </div> 
+     RU -->
+  <!--RU new div to poin to university home page-->
+  <div class="ep_tm_site_logo">
+   <!--img alt="OA week" src="{$config{rel_path}}/images/OAWeek2018BannerOriginal.png"/-->
+   <a href="http://www.maynoothuniversity.ie" title="Maynooth University">
+    <img alt="Maynooth University" src="/images/sitelogo.png"/>
+   </a>
+  </div>
+  <!--RU new div ends-->
+  <!--RU <ul> the menu bar has been moved to the page content rather than part of pagetop	
+      </ul> -->
+  <!--RU the search box and login stagtus is commented out here as it will be placed only in the index page-->
+  <!-- <table class="ep_tm_searchbar">
+        <tr>
+          <td align="left">
+            <epc:pin ref="login_status"/>
+          </td>
+          <td align="right" style="white-space: nowrap">
+            <epc:pin ref="languages"/>
+            <form method="get" accept-charset="utf-8" action="{$config{http_cgiurl}}/search" style="display:inline">
+              <input class="ep_tm_searchbarbox" size="20" type="text" name="q"/>
+              <input class="ep_tm_searchbarbutton" value="{phrase('lib/searchexpression:action_search')}" type="submit" name="_action_search"/>
+              <input type="hidden" name="_action_search" value="Search"/>
+              <input type="hidden" name="_order" value="bytitle"/>
+              <input type="hidden" name="basic_srchtype" value="ALL"/>
+              <input type="hidden" name="_satisfyall" value="ALL"/>
+            </form>
+          </td>
+        </tr>
+      </table>-->
+  <!--RU hiding of search box and status bar ends-->
+ </div>
+ <!--RU add archive neme here to bring it above menu bar-->
+ <h1 align="left">
+  MURAL - Maynooth University Research Archive Library
+ </h1>
+ <!--RU archive name add ends-->
+ <div>
+  <div class="ep_tm_page_content">
+   <!--RU bring in the menu bar here except search box which will be put in the index.xpage-->
+   <ul class="ep_tm_menu">
+    <li>
+     <a href="http://mural.maynoothuniversity.ie">
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="http://mural.maynoothuniversity.ie/information.html">
+      About
+     </a>
+    </li>
+    <li>
+     <a href="http://mural.maynoothuniversity.ie/view/" menu="ep_tm_menu_browse">
+      Browse
+     </a>
+     <ul id="ep_tm_menu_browse" style="display:none;">
+      <li>
+       <a href="http://mural.maynoothuniversity.ie/view/year/">
+        Browse by 
+                Year
+       </a>
+      </li>
+      <!--RU commenting out subject view since we do not have it-->
+      <!--li>
+               <a href="{$config{http_url}}/view/subjects/">
+                <epc:phrase ref="bin/generate_views:indextitleprefix"/>
+                <epc:phrase ref="viewname_eprint_subjects"/>
+              </a>
+            </li-->
+      <!--RU comment end-->
+      <li>
+       <a href="http://mural.maynoothuniversity.ie/view/divisions/">
+        Browse by 
+                Academic Unit
+       </a>
+      </li>
+      <li>
+       <a href="http://mural.maynoothuniversity.ie/view/creators/">
+        Browse by 
+                Author
+       </a>
+      </li>
+     </ul>
+    </li>
+    <!-- RU adding a Li for Register.xpage-->
+    <li>
+     <a href="http://mural.maynoothuniversity.ie/register.html">
+      Register
+     </a>
+    </li>
+    <!--RU li for register.xpage end-->
+    <!--RU adding one li for ethesis-->
+    <li>
+     <a href="http://mural.maynoothuniversity.ie/ethesis/">
+      eTheses
+     </a>
+    </li>
+    <!--RU li for ethesis ends-->
+    <!--RU adding one li for IRstat-->
+    <li>
+     <a href="http://mural.maynoothuniversity.ie/cgi/stats/report/">
+      Statistics
+     </a>
+    </li>
+    <!--RU li for IRstat ends-->
+    <!--RU addition for MU library link-->
+    <li>
+     <a href="https://www.maynoothuniversity.ie/library">
+      MU Library
+     </a>
+    </li>
+    <!--RU li for MU Library ends-->
+    <!--RU add li for repo policies-->
+    <li>
+     <a href="https://www.maynoothuniversity.ie/sites/default/files/assets/document/open%20access%20mandate%202017%20RON_0.pdf">
+      Repository Policies
+     </a>
+    </li>
+    <!--RU add for repo policy end-->
+    <!--RU for libguides-->
+    <li>
+     <a href="http://nuim.libguides.com/mural">
+      Libguide
+     </a>
+    </li>
+    <!--RU libguides end-->
+    <!--RU add li for login-->
+    <li>
+     <a href="https://mural.maynoothuniversity.ie/cgi/users/home/">
+      Login
+     </a>
+    </li>
+    <!--RU li for login ends-->
+   </ul>
+   <div>
+    <ul class="ep_tm_key_tools" id="ep_tm_menu_tools">
+    </ul>
+    <!--RU need this to show the status bar when logged in. The status bar has been modified in dynamic_template.pl at /opt/eprints3/archives/nuimeprn/cfg/cfg.d-->
+   </div>
+   <br/>
+   <br/>
+   <!--RU create space between menu bar and title-->
+   <!--RU the title of page goes after the menu bar-->
+   <h1 class="ep_tm_pagetitle">
+    Access to Abortion in cases of Fatal Fetal Abnormality: A New Direction for the European Court of Human Rights?
+   </h1>
+   <!--RU title below menu bar ends-->
+   <br/>
+   <!--RU create space between title and the rest of the page-->
+   <!-- RU bringing in menu bar under archive name ends-->
+   <!--	<div> -->
+   <!--RU a new div set to give a description about MURAL-->
+   <!--	  MURAL is IR of MU and St.Patrics college. -->
+   <!--	</div> -->
+   <div class="ep_summary_content">
+    <div class="ep_summary_content_left">
+    </div>
+    <div class="ep_summary_content_right">
+    </div>
+    <div class="ep_summary_content_top">
+    </div>
+    <div class="ep_summary_content_main">
+     <p style="margin-bottom: 1em">
+      <span class="person_name">
+       Ni Ghrainne, Brid
+      </span>
+      and
+      <span class="person_name">
+       McMahon, Aisling
+      </span>
+      (2019)
+      <em>
+       Access to Abortion in cases of Fatal Fetal Abnormality: A New Direction for the European Court of Human Rights?
+      </em>
+      Human Rights Law Review.
+    
+     ISSN 1461-7781
+  
+
+
+   (In Press)
+     </p>
+     <table>
+      <tr>
+       <td align="right" valign="top">
+        <a class="ep_document_link" href="http://mural.maynoothuniversity.ie/10743/1/Human%20Rights%20Law%20Review%20Article%20NiGhrainne%20and%20McMahon.pdf">
+         <img alt="[img]" border="0" class="ep_doc_icon" src="http://mural.maynoothuniversity.ie/style/images/fileicons/text.png"/>
+        </a>
+       </td>
+       <td valign="top">
+        <!-- RU <epc:print expr="$doc.citation('default')" /><br /> RU -->
+        <a class="ep_document_link" href="http://mural.maynoothuniversity.ie/10743/1/Human%20Rights%20Law%20Review%20Article%20NiGhrainne%20and%20McMahon.pdf">
+         Download (560kB)
+        </a>
+        <ul>
+        </ul>
+       </td>
+      </tr>
+     </table>
+     <!--RU test of social media share icon-->
+     <br/>
+     <br/>
+     <script src="https://platform.twitter.com/widgets.js" type="text/javascript">
+      // <!-- No script -->
+     </script>
+     <div align="right">
+      <p>
+       <span style="font-weight:bold;font-style:italic;color:blue;">
+        Share your research
+       </span>
+      </p>
+      <span>
+       <a href="https://twitter.com/intent/tweet?url=http://mural.maynoothuniversity.ie/10743">
+        <img alt="Twitter" src="http://mural.maynoothuniversity.ie/images/icons8-Twitter-26.png" style="width:20px;height:20px;border:0;"/>
+       </a>
+      </span>
+      <span>
+       <a href="https://www.facebook.com/sharer/sharer.php?u=http://mural.maynoothuniversity.ie/10743" target="_blank">
+        <img alt="Facebook" src="http://mural.maynoothuniversity.ie/images/facebook.png" style="width:20px;height:20px;border:0;"/>
+       </a>
+      </span>
+      <span>
+       <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://mural.maynoothuniversity.ie/10743&amp;title=Access to Abortion in cases of Fatal Fetal Abnormality: A New Direction for the European Court of Human Rights?" target="_blank">
+        <img alt="LinkedIn" src="http://mural.maynoothuniversity.ie/images/linkedin.png" style="width:20px;height:20px;border:0;"/>
+       </a>
+      </span>
+      <span>
+       <a href="https://plus.google.com/share?url=http://mural.maynoothuniversity.ie/10743" target="_blank">
+        <img alt="GooglePlus" src="http://mural.maynoothuniversity.ie/images/googleplus.png" style="width:20px;height:20px;border:0;"/>
+       </a>
+      </span>
+      <!--span><a href="mailto:?subject={title}&amp;body={$config{http_url}}/{eprintid}">email</a></span-->
+      <span>
+       <a href="https://api.addthis.com/oexchange/0.8/forward/email/offer?url=http://mural.maynoothuniversity.ie/10743&amp;title=Access to Abortion in cases of Fatal Fetal Abnormality: A New Direction for the European Court of Human Rights?" target="_blank">
+        <img alt="Email" src="http://mural.maynoothuniversity.ie/images/sendmail.png" style="width:20px;height:20px;border:0;"/>
+       </a>
+      </span>
+      <!--additional component from addthis-->
+      <span>
+       <a href="http://api.addthis.com/oexchange/0.8/offer?url=http://addthis.com&amp;title=Access to Abortion in cases of Fatal Fetal Abnormality: A New Direction for the European Court of Human Rights?&amp;description=http://mural.maynoothuniversity.ie/10743" rel="nofollow">
+        more...
+       </a>
+      </span>
+     </div>
+     <!--RU test end -->
+     <!--RU test of export -->
+     <br/>
+     <br/>
+     <div align="left">
+      <form accept-charset="utf-8" action="http://mural.maynoothuniversity.ie/cgi/export_redirect" method="get">
+       <input id="dataset" name="dataset" type="hidden" value="eprint"/>
+       <input id="dataobj" name="dataobj" type="hidden" value="10743"/>
+       <select name="format">
+        <option value="Text">
+         ASCII Citation
+        </option>
+        <option value="Atom">
+         Atom
+        </option>
+        <option value="BibTeX">
+         BibTeX
+        </option>
+        <option value="DC">
+         Dublin Core
+        </option>
+        <option value="XML">
+         EP3 XML
+        </option>
+        <option value="XMLFiles">
+         EP3 XML with Files Embeded
+        </option>
+        <option value="EndNote">
+         EndNote
+        </option>
+        <option value="Grid">
+         Grid (abstract)
+        </option>
+        <option value="HTML">
+         HTML Citation
+        </option>
+        <option value="JSON">
+         JSON
+        </option>
+        <option value="METS">
+         METS
+        </option>
+        <option value="MODS">
+         MODS
+        </option>
+        <option value="DIDL">
+         MPEG-21 DIDL
+        </option>
+        <option value="CSV">
+         Multiline CSV
+        </option>
+        <option value="MultilineCSV">
+         Multiline CSV (Staff)
+        </option>
+        <option value="ContextObject">
+         OpenURL ContextObject
+        </option>
+        <option value="COinS">
+         OpenURL ContextObject in Span
+        </option>
+        <option value="RDFNT">
+         RDF+N-Triples
+        </option>
+        <option value="RDFN3">
+         RDF+N3
+        </option>
+        <option value="RDFXML">
+         RDF+XML
+        </option>
+        <option value="Refer">
+         Refer
+        </option>
+        <option value="RIS">
+         Reference Manager
+        </option>
+        <option value="Simple">
+         Simple Metadata
+        </option>
+       </select>
+       <input class="ep_form_action_button" type="submit" value="Export"/>
+      </form>
+     </div>
+     <br/>
+     <div align="left">
+      <img src="http://www.mendeley.com/graphics/mendeley.png"/>
+      <a href="http://www.mendeley.com/import/?url=http://eprints.maynoothuniversity.ie/10743/">
+       Add this article to your Mendeley library
+      </a>
+     </div>
+     <br/>
+     <br/>
+     <!-- RU test end -->
+     <h2>
+      Abstract
+     </h2>
+     <p style="text-align: left; margin: 1em auto 0em auto">
+      In contrast to the United Nations Human Rights Committee (HRComm), the European Court of Human Rights (ECtHR) has not yet found that a prohibition of abortion in cases of fatal fetal abnormality (FFA) violates the prohibition of torture or inhuman and degrading treatment under Article 3 of the European Convention on Human Rights. We argue that the ECtHR is on the verge of aligning itself with the HRComm because first, recent ECtHR jurisprudence is broadening its interpretation of rights within the abortion context; second, the ECtHR frequently uses international law as an interpretative tool; and third, moving in the direction of the HRComm would not be as controversial as it may have been in the past. More broadly, we take a positive view of fragmentation of international human rights law and demonstrate how an international court, with some ingenuity, can broaden its approach on sensitive topics, by engaging with views of other international courts or treaty monitoring bodies.
+     </p>
+     <table cellpadding="3" style="margin-bottom: 1em; margin-top: 1em;">
+      <tr>
+       <th align="right">
+        Item Type:
+       </th>
+       <td>
+        Article
+       </td>
+      </tr>
+      <tr>
+       <th align="right">
+        Keywords:
+       </th>
+       <td valign="top">
+        human rights; abortion; fatal fetal abnormality; European Court of Human Rights; United Nations Human Rights Committee;
+       </td>
+      </tr>
+      <tr>
+       <th align="right">
+        Academic Unit:
+       </th>
+       <td valign="top">
+        <a href="http://mural.maynoothuniversity.ie/view/divisions/dept=5Flaw.html">
+         Faculty of Social Sciences &gt; Law
+        </a>
+       </td>
+      </tr>
+      <tr>
+       <th align="right">
+        Item ID:
+       </th>
+       <td valign="top">
+        10743
+       </td>
+      </tr>
+      <tr>
+       <th align="right">
+        Depositing User:
+       </th>
+       <td valign="top">
+        <span class="ep_name_citation">
+         <span class="person_name">
+          Aisling McMahon
+         </span>
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <th align="right">
+        Date Deposited:
+       </th>
+       <td valign="top">
+        23 Apr 2019 16:42
+       </td>
+      </tr>
+      <tr>
+       <th align="right">
+        Journal or Publication Title:
+       </th>
+       <td valign="top">
+        Human Rights Law Review
+       </td>
+      </tr>
+      <tr>
+       <th align="right">
+        Publisher:
+       </th>
+       <td valign="top">
+        Oxford University Press
+       </td>
+      </tr>
+      <tr>
+       <th align="right">
+        Refereed:
+       </th>
+       <td valign="top">
+        Yes
+       </td>
+      </tr>
+      <tr>
+       <th align="right">
+        URI:
+       </th>
+       <!-- RU <td valign="top"><a href="{$item.uri()}"><epc:print expr="$item.uri()" /></a></td> RU -->
+       <td valign="top">
+        <a href="eprint_fieldname_related_url">
+         <ul>
+          <li>
+           <a href="https://academic.oup.com/hrlr">
+            Publisher
+           </a>
+          </li>
+         </ul>
+        </a>
+       </td>
+      </tr>
+     </table>
+     <!--RU <h3>Actions (login required)</h3>-->
+     <h3>
+      Repository Staff Only(login required)
+     </h3>
+     <table class="ep_summary_page_actions">
+      <tr>
+       <td>
+        <a href="/cgi/users/home?screen=EPrint%3A%3AView&amp;eprintid=10743">
+         <img alt="View Item" class="ep_form_action_icon" src="/style/images/action_view.png" title="View Item"/>
+        </a>
+       </td>
+       <!--RU<td><epc:print expr="$action.action_title()" /></td>-->
+       <td>
+        Item control page
+       </td>
+      </tr>
+     </table>
+     <!--RU added this line as suggested in the wiki-->
+     <h3 class="irstats2_summary_page_header">
+      Downloads
+     </h3>
+     <div class="irstats2_summary_page_container">
+      <p>
+       Downloads per month over past year
+      </p>
+      <div class="irstats2_graph" id="irstats2_summary_page_downloads">
+      </div>
+      <!--<p style="text-align:center"><a href="#" id="irstats2_summary_page:link">View more statistics</a></p>-->
+     </div>
+     <script type="text/javascript">
+      document.observe("dom:loaded",function(){
+
+		var irstats2_summary_page_eprintid = '10743';
+
+		/* $( 'irstats2_summary_page:link' ).setAttribute( 'href', '/cgi/stats/report/eprint/' + irstats2_summary_page_eprintid ); */
+
+		new EPJS_Stats_GoogleGraph ( { 'context': {
+			'range':'1y',
+			'set_name': 'eprint',
+			'set_value': irstats2_summary_page_eprintid,
+			'datatype':'downloads' },
+			'options': {
+			'container_id': 'irstats2_summary_page_downloads', 'date_resolution':'month','graph_type':'column'
+			} } );
+		});
+     </script>
+     <!--RU add ends-->
+    </div>
+    <div class="ep_summary_content_bottom">
+     <div class="ep_summary_box" id="ep_summary_box_9521">
+      <div class="ep_summary_box_title">
+       <div class="ep_no_js">
+        Altmetric
+       </div>
+       <div class="ep_only_js" id="ep_summary_box_9521_colbar">
+        <a class="ep_box_collapse_link" href="#" onclick="EPJS_blur(event); EPJS_toggleSlideScroll('ep_summary_box_9521_content',true,'ep_summary_box_9521');EPJS_toggle('ep_summary_box_9521_colbar',true);EPJS_toggle('ep_summary_box_9521_bar',false);return false">
+         <img alt="-" border="0" src="/style/images/minus.png"/>
+         Altmetric
+        </a>
+       </div>
+       <div class="ep_only_js" id="ep_summary_box_9521_bar" style="display: none">
+        <a class="ep_box_collapse_link" href="#" onclick="EPJS_blur(event); EPJS_toggleSlideScroll('ep_summary_box_9521_content',false,'ep_summary_box_9521');EPJS_toggle('ep_summary_box_9521_colbar',true);EPJS_toggle('ep_summary_box_9521_bar',false);return false">
+         <img alt="+" border="0" src="/style/images/plus.png"/>
+         Altmetric
+        </a>
+       </div>
+      </div>
+      <div class="ep_summary_box_body" id="ep_summary_box_9521_content">
+       <div id="ep_summary_box_9521_content_inner">
+        <div data-altmetric-id="10743" data-altmetric-id-type="eprintid" id="altmetric_summary_page">
+        </div>
+        <script type="text/javascript">
+         // <![CDATA[
+new EP_Altmetric_Badge( 'altmetric_summary_page' );
+// ]]>
+        </script>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="ep_summary_content_after">
+    </div>
+   </div>
+  </div>
+ </div>
+ <div class="ep_tm_footer ep_noprint">
+  <div class="ep_tm_eprints_logo">
+   <a href="http://eprints.org/software/">
+    <img alt="EPrints Logo" src="/images/eprintslogo.gif"/>
+   </a>
+  </div>
+  <div>
+   MURAL - Maynooth University Research Archive Library  is powered by
+   <em>
+    <a href="http://eprints.org/software/">
+     EPrints 3
+    </a>
+   </em>
+   which is developed by the
+   <a href="http://www.ecs.soton.ac.uk/">
+    School of Electronics and Computer Science
+   </a>
+   at the University of Southampton.
+   <a href="http://mural.maynoothuniversity.ie/eprints/">
+    More information and software credits
+   </a>
+   .
+  </div>
+ </div>
+</body>

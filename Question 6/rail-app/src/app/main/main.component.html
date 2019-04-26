@@ -1,0 +1,51 @@
+
+<body>
+  <div *ngIf = '!dataBoolean'> Nothing no show!</div>
+  <div *ngIf = 'dataBoolean'>
+    <h3>Looking up realtime information for <b>{{stationFocus}}</b></h3>
+  </div>
+  <div> 
+    <label for="typeahead-focus">Find realtime data. Type your station:</label>
+    <input
+      id="typeahead-focus"
+      type="text"
+      class="form-control"
+      [ngbTypeahead]="search"
+      (focus)="focus$.next($event.target.value)"
+      (blur) = 'yo($event.target.value)'
+      (enter) = 'yo($event.target.value)'
+      (click)="click$.next($event.target.value)"
+      #instance="ngbTypeahead"
+    />
+  </div>
+  <br>
+  <br>
+  <div class = 'center'>
+    <ul *ngFor="let item of railData">
+      <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title><b>Towards</b> <i>  {{item.destination}}</i> </mat-card-title>
+            <mat-card-subtitle><b>Station</b>  {{stationFocus}}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+              <mat-list>
+                  <mat-list-item><b>Destination:</b>   {{item.destination}}</mat-list-item>
+                  <mat-divider></mat-divider>
+                  <mat-list-item><b>Expected Arrival:</b> <span></span>{{item.exparrival}}</mat-list-item>
+                  <mat-divider></mat-divider>
+                  <mat-list-item><b>Due in:</b> <span></span>{{item.duein}} Minutes</mat-list-item>
+                  <mat-divider></mat-divider>
+                  <mat-list-item><b>Destination Time:</b> <span></span>{{item.destinationtime}}</mat-list-item>
+                  <mat-divider></mat-divider>
+                  <mat-list-item><b>Origin:</b> <span></span>{{item.origin}}</mat-list-item>
+                  <mat-divider></mat-divider>
+                </mat-list>
+          </mat-card-content>
+          <mat-card-actions>
+          </mat-card-actions>
+        </mat-card>
+        <br>
+    </ul>
+  </div>
+</body>

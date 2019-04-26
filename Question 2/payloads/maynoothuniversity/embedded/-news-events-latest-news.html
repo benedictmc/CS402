@@ -1,0 +1,227 @@
+<body>
+ <div class="ep_tm_header ep_noprint">
+  <!--RU  replace the following div to point to University rather than eprints home page  
+         <div class="ep_tm_site_logo">
+           <a href="{$config{frontpage}}" title="{phrase('archive_name')}">
+            <img alt="{phrase('archive_name')}" src="{$config{rel_path}}{$config{site_logo}}"/>
+          </a>
+        </div> 
+     RU -->
+  <!--RU new div to poin to university home page-->
+  <div class="ep_tm_site_logo">
+   <!--img alt="OA week" src="{$config{rel_path}}/images/OAWeek2018BannerOriginal.png"/-->
+   <a href="http://www.maynoothuniversity.ie" title="Maynooth University">
+    <img alt="Maynooth University" src="/images/sitelogo.png"/>
+   </a>
+  </div>
+  <!--RU new div ends-->
+  <!--RU <ul> the menu bar has been moved to the page content rather than part of pagetop	
+      </ul> -->
+  <!--RU the search box and login stagtus is commented out here as it will be placed only in the index page-->
+  <!-- <table class="ep_tm_searchbar">
+        <tr>
+          <td align="left">
+            <epc:pin ref="login_status"/>
+          </td>
+          <td align="right" style="white-space: nowrap">
+            <epc:pin ref="languages"/>
+            <form method="get" accept-charset="utf-8" action="{$config{http_cgiurl}}/search" style="display:inline">
+              <input class="ep_tm_searchbarbox" size="20" type="text" name="q"/>
+              <input class="ep_tm_searchbarbutton" value="{phrase('lib/searchexpression:action_search')}" type="submit" name="_action_search"/>
+              <input type="hidden" name="_action_search" value="Search"/>
+              <input type="hidden" name="_order" value="bytitle"/>
+              <input type="hidden" name="basic_srchtype" value="ALL"/>
+              <input type="hidden" name="_satisfyall" value="ALL"/>
+            </form>
+          </td>
+        </tr>
+      </table>-->
+  <!--RU hiding of search box and status bar ends-->
+ </div>
+ <!--RU add archive neme here to bring it above menu bar-->
+ <h1 align="left">
+  MURAL - Maynooth University Research Archive Library
+ </h1>
+ <!--RU archive name add ends-->
+ <div>
+  <div class="ep_tm_page_content">
+   <!--RU bring in the menu bar here except search box which will be put in the index.xpage-->
+   <ul class="ep_tm_menu">
+    <li>
+     <a href="http://mural.maynoothuniversity.ie">
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="http://mural.maynoothuniversity.ie/information.html">
+      About
+     </a>
+    </li>
+    <li>
+     <a href="http://mural.maynoothuniversity.ie/view/" menu="ep_tm_menu_browse">
+      Browse
+     </a>
+     <ul id="ep_tm_menu_browse" style="display:none;">
+      <li>
+       <a href="http://mural.maynoothuniversity.ie/view/year/">
+        Browse by 
+                Year
+       </a>
+      </li>
+      <!--RU commenting out subject view since we do not have it-->
+      <!--li>
+               <a href="{$config{http_url}}/view/subjects/">
+                <epc:phrase ref="bin/generate_views:indextitleprefix"/>
+                <epc:phrase ref="viewname_eprint_subjects"/>
+              </a>
+            </li-->
+      <!--RU comment end-->
+      <li>
+       <a href="http://mural.maynoothuniversity.ie/view/divisions/">
+        Browse by 
+                Academic Unit
+       </a>
+      </li>
+      <li>
+       <a href="http://mural.maynoothuniversity.ie/view/creators/">
+        Browse by 
+                Author
+       </a>
+      </li>
+     </ul>
+    </li>
+    <!-- RU adding a Li for Register.xpage-->
+    <li>
+     <a href="http://mural.maynoothuniversity.ie/register.html">
+      Register
+     </a>
+    </li>
+    <!--RU li for register.xpage end-->
+    <!--RU adding one li for ethesis-->
+    <li>
+     <a href="http://mural.maynoothuniversity.ie/ethesis/">
+      eTheses
+     </a>
+    </li>
+    <!--RU li for ethesis ends-->
+    <!--RU adding one li for IRstat-->
+    <li>
+     <a href="http://mural.maynoothuniversity.ie/cgi/stats/report/">
+      Statistics
+     </a>
+    </li>
+    <!--RU li for IRstat ends-->
+    <!--RU addition for MU library link-->
+    <li>
+     <a href="https://www.maynoothuniversity.ie/library">
+      MU Library
+     </a>
+    </li>
+    <!--RU li for MU Library ends-->
+    <!--RU add li for repo policies-->
+    <li>
+     <a href="https://www.maynoothuniversity.ie/sites/default/files/assets/document/open%20access%20mandate%202017%20RON_0.pdf">
+      Repository Policies
+     </a>
+    </li>
+    <!--RU add for repo policy end-->
+    <!--RU for libguides-->
+    <li>
+     <a href="http://nuim.libguides.com/mural">
+      Libguide
+     </a>
+    </li>
+    <!--RU libguides end-->
+    <!--RU add li for login-->
+    <li>
+     <a href="https://mural.maynoothuniversity.ie/cgi/users/home/">
+      Login
+     </a>
+    </li>
+    <!--RU li for login ends-->
+   </ul>
+   <div>
+    <ul class="ep_tm_key_tools" id="ep_tm_menu_tools">
+    </ul>
+    <!--RU need this to show the status bar when logged in. The status bar has been modified in dynamic_template.pl at /opt/eprints3/archives/nuimeprn/cfg/cfg.d-->
+   </div>
+   <br/>
+   <br/>
+   <!--RU create space between menu bar and title-->
+   <!--RU the title of page goes after the menu bar-->
+   <h1 class="ep_tm_pagetitle">
+    404 File not Found
+   </h1>
+   <!--RU title below menu bar ends-->
+   <br/>
+   <!--RU create space between title and the rest of the page-->
+   <!-- RU bringing in menu bar under archive name ends-->
+   <!--	<div> -->
+   <!--RU a new div set to give a description about MURAL-->
+   <!--	  MURAL is IR of MU and St.Patrics college. -->
+   <!--	</div> -->
+   <p>
+    Could not find the file:
+    <code>
+     /10743//news-events/latest-news
+    </code>
+   </p>
+   <p>
+    The file you are trying to access may be related to this item:
+   </p>
+   <p>
+    <span class="person_name">
+     Ni Ghrainne, Brid
+    </span>
+    and
+    <span class="person_name">
+     McMahon, Aisling
+    </span>
+    (2019)
+    <a href="http://mural.maynoothuniversity.ie/10743/">
+     <em>
+      Access to Abortion in cases of Fatal Fetal Abnormality: A New Direction for the European Court of Human Rights?
+     </em>
+    </a>
+    Human Rights Law Review.
+    
+     ISSN 1461-7781
+  
+
+
+   (In Press)
+   </p>
+   <p>
+    If you reached this page by following a link within the repository, please contact the
+    <a href="mailto:mural@mu.ie">
+     MURAL - Maynooth University Research Archive Library  administration
+    </a>
+    .  Otherwise, please check that you have typed the URL in correctly, or contact the person or site that supplied you with this URL.
+   </p>
+  </div>
+ </div>
+ <div class="ep_tm_footer ep_noprint">
+  <div class="ep_tm_eprints_logo">
+   <a href="http://eprints.org/software/">
+    <img alt="EPrints Logo" src="/images/eprintslogo.gif"/>
+   </a>
+  </div>
+  <div>
+   MURAL - Maynooth University Research Archive Library  is powered by
+   <em>
+    <a href="http://eprints.org/software/">
+     EPrints 3
+    </a>
+   </em>
+   which is developed by the
+   <a href="http://www.ecs.soton.ac.uk/">
+    School of Electronics and Computer Science
+   </a>
+   at the University of Southampton.
+   <a href="http://mural.maynoothuniversity.ie/eprints/">
+    More information and software credits
+   </a>
+   .
+  </div>
+ </div>
+</body>
